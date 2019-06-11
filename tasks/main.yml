@@ -95,7 +95,3 @@
     return_content: yes
   register: metrics
   check_mode: no
-
-- name: fail when haproxy-exporter unable to collect metrics
-  fail:
-  when: "'haproxy_up 1' not in metrics.content"
